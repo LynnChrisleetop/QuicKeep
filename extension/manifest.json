@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "QuicKeep",
+  "version": "0.1.0",
+  "description": "保存当前网页截图和网址到本地 Obsidian Markdown 文件。",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:28765/*",
+    "http://localhost:28765/*"
+  ],
+  "action": {
+    "default_title": "QuicKeep",
+    "default_popup": "popup.html"
+  }
+}

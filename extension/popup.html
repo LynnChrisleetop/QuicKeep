@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuicKeep</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>QuicKeep</h1>
+      <p>截图 + 网址 → Obsidian Markdown</p>
+    </header>
+
+    <button id="capture" type="button" class="primary full-width capture-top">保存当前页面</button>
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <section class="profile-panel" aria-labelledby="profile-heading">
+      <div class="profile-heading">
+        <h2 id="profile-heading">路径配置</h2>
+        <button id="save-profile" type="button" class="secondary compact-button">保存当前路径</button>
+      </div>
+
+      <div class="profile-select-row">
+        <select id="profile-select" aria-label="快速选择路径配置">
+          <option value="">选择已有标签…</option>
+        </select>
+        <button id="delete-profile" type="button" class="secondary compact-button">删除</button>
+      </div>
+    </section>
+
+    <dialog id="profile-dialog">
+      <form id="profile-dialog-form">
+        <h3>给这组路径加个标签</h3>
+        <p>以后可以从下拉框快速选择这组路径。</p>
+        <input id="profile-dialog-name" type="text" placeholder="例如：工作笔记" autocomplete="off" required>
+        <div class="dialog-actions">
+          <button id="profile-dialog-cancel" type="button" class="secondary">取消</button>
+          <button id="profile-dialog-confirm" type="submit" class="primary">保存标签</button>
+        </div>
+      </form>
+    </dialog>
+
+    <form id="settings-form">
+      <label>
+        Markdown 文件路径
+        <input id="md-path" type="text" placeholder="例如 E:\Notes\inbox.md" required>
+      </label>
+
+      <label>
+        图片保存目录
+        <input id="image-dir" type="text" placeholder="留空则使用 Markdown 同目录下的 assets 文件夹">
+      </label>
+
+      <label>
+        本地桥接服务地址
+        <input id="bridge-url" type="url" value="http://127.0.0.1:28765" required>
+      </label>
+
+      <div class="actions">
+        <button id="save-settings" type="submit" class="secondary">保存设置</button>
+        <button id="check-service" type="button" class="secondary">检查服务</button>
+      </div>
+    </form>
+
+    <p class="hint">填写 Markdown 路径后点击“保存当前路径”，图片目录可以留空，系统会使用同目录下的 assets 文件夹。在弹窗中输入标签即可保存；选择标签会自动填入对应路径。如果提示服务未启动，请双击 QuicKeep 项目目录里的 start-quicKeep.cmd。</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

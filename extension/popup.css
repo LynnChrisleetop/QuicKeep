@@ -1,0 +1,247 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  background: #f6f7fb;
+  color: #1f2430;
+}
+
+.app {
+  padding: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+header p {
+  margin: 4px 0 13px;
+  color: #667085;
+  font-size: 13px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 13px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  font-size: 12px;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.primary {
+  background: #3167d5;
+  color: #fff;
+}
+
+.secondary {
+  background: #e4e8f0;
+  color: #27324a;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.capture-top {
+  padding: 11px 10px;
+}
+
+#status {
+  min-height: 17px;
+  margin: 8px 0 11px;
+  color: #3167d5;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+#status.error {
+  color: #b42318;
+}
+
+.profile-panel {
+  margin-bottom: 13px;
+  padding: 10px;
+  border: 1px solid #d7dce6;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.profile-select-row {
+  display: flex;
+  gap: 6px;
+}
+
+.profile-select-row select {
+  min-width: 0;
+  flex: 1;
+  padding: 8px 9px;
+}
+
+.compact-button {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+}
+
+.profile-panel input,
+.profile-panel select,
+label input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #c8ceda;
+  border-radius: 7px;
+  background: #fff;
+  color: #1f2430;
+}
+
+label {
+  display: block;
+  margin: 11px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+label input {
+  display: block;
+  margin-top: 5px;
+  padding: 8px 9px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 9px 8px;
+}
+
+.hint {
+  margin: 13px 0 0;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+dialog {
+  width: 285px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #1f2430;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.35);
+}
+
+dialog form {
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+dialog p {
+  margin: 7px 0 12px;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+dialog input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #c8ceda;
+  border-radius: 7px;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.dialog-actions button {
+  flex: 1;
+  padding: 9px 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #20242c;
+    color: #f3f4f6;
+  }
+
+  header p, .hint {
+    color: #a6adbb;
+  }
+
+  .profile-panel {
+    border-color: #4e5665;
+    background: rgba(42, 48, 59, 0.8);
+  }
+
+  .profile-panel input,
+  .profile-panel select,
+  label input,
+  dialog input {
+    border-color: #4e5665;
+    background: #2a303b;
+    color: #f3f4f6;
+  }
+
+  dialog {
+    color: #f3f4f6;
+  }
+
+  dialog form {
+    background: #2a303b;
+  }
+
+  dialog p {
+    color: #a6adbb;
+  }
+
+  .secondary {
+    background: #3b4351;
+    color: #f3f4f6;
+  }
+}
